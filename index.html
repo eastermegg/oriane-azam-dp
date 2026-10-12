@@ -169,6 +169,13 @@ footer{padding:32px var(--gutter) 48px;color:var(--muted);font-size:11px;letter-
 .varr.l{left:12px} .varr.r{right:12px} .varr[disabled]{opacity:0;pointer-events:none}
 @media (max-width:1000px){.vtrack{grid-auto-columns:calc((100% - 20px) / 2.4)}}
 @media (max-width:760px){.vtrack{grid-auto-columns:72%}.varr{display:none}}
+.cover .panel{display:flex;flex-direction:column}
+.clinks{margin:auto 0 0;padding-top:40px;display:grid;gap:10px}
+.clinks div{display:grid;grid-template-columns:90px 1fr;align-items:baseline;gap:12px}
+.clinks dt{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:500}
+.clinks dd{margin:0;font-size:15px}
+.clinks a{text-decoration:none;border-bottom:1px solid var(--rule)} .clinks a:hover{border-color:var(--fg)}
+.clinks i{display:inline-block;width:1px;height:.9em;background:var(--muted);vertical-align:-.1em;margin:0 10px}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 </style>
 </head>
@@ -177,7 +184,7 @@ footer{padding:32px var(--gutter) 48px;color:var(--muted);font-size:11px;letter-
 
 <nav><div class="in">
   <a class="brand" href="#top">Oriane Azam</a><span class="cur" id="cur" aria-live="polite"></span>
-  <a href="#portrait">Portrait</a><a href="#nuits-d-orion">Mes créations</a><a href="#videos">Vidéos</a><a href="#contact">Contact</a>
+  <a href="#portrait">Portrait</a><a href="#nuits-d-orion">Mes créations</a><a href="#contact">Contact</a>
 </div></nav>
 
 <header class="cover" id="top">
@@ -186,6 +193,12 @@ footer{padding:32px var(--gutter) 48px;color:var(--muted);font-size:11px;letter-
     <p class="kind">Dossier de presse</p>
     <h1>Oriane<br>Azam</h1>
     <p class="meta">Chorégraphe<i></i>Directrice artistique</p>
+    <dl class="clinks">
+      <div><dt>Site</dt><dd><a href="https://lesnuitsdorion.com" target="_blank" rel="noopener">lesnuitsdorion.com</a></dd></div>
+      <div><dt>Instagram</dt><dd><a href="https://www.instagram.com/oriane_heels/" target="_blank" rel="noopener">@oriane_heels</a><i></i><a href="https://www.instagram.com/lesnuitsdorion_/" target="_blank" rel="noopener">@lesnuitsdorion_</a></dd></div>
+      <div><dt>Contact</dt><dd><a href="mailto:oriane.heels@gmail.com">oriane.heels@gmail.com</a></dd></div>
+      <div><dt>PDF</dt><dd><a href="Dossier-de-presse-Oriane-Azam.pdf" target="_blank" rel="noopener">Télécharger le dossier de presse</a></dd></div>
+    </dl>
   </div>
 </header>
 
