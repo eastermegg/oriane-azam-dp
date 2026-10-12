@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="Oriane Azam, chorégraphe et directrice artistique. Les Nuits d'Orion, Supernova Show, Love Rhapsodie Show.">
+<meta property="og:title" content="Oriane Azam - Portfolio">
+<meta property="og:description" content="Chorégraphe et directrice artistique. Les Nuits d'Orion, Supernova Show, Love Rhapsodie Show.">
+<meta property="og:image" content="/img/old-couverture.jpg">
+<meta property="og:type" content="website">
+<style>html{color-scheme:dark}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Oriane Azam - Portfolio</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..100,500..700&display=swap">
+<style>
+@font-face { font-family:'Switzer'; font-weight:300; src:url('fonts/switzer-300.woff2') format('woff2'); font-display:swap }
+@font-face { font-family:'Switzer'; font-weight:400; src:url('fonts/switzer-400.woff2') format('woff2'); font-display:swap }
+@font-face { font-family:'Switzer'; font-weight:500; src:url('fonts/switzer-500.woff2') format('woff2'); font-display:swap }
+@font-face { font-family:'Switzer'; font-weight:600; src:url('fonts/switzer-600.woff2') format('woff2'); font-display:swap }
+/* layout: a dark book — one spectacle per chapter, text column + hero, then a photo grid and a wall of silent clips */
+:root {
+  --bg:#0a0a0a; --fg:#efece6; --muted:#8f8b83; --rule:rgba(239,236,230,.18); --accent:#efece6; --photo:#141414;
+  --display:'Archivo','Helvetica Neue',Arial,sans-serif; --sans:'Switzer','Inter','Helvetica Neue',Arial,sans-serif;
+  --gutter:clamp(16px,4vw,48px); color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--sans);font-size:15px;line-height:1.55;-webkit-font-smoothing:antialiased;letter-spacing:-.01em}
+a{color:inherit}
+img,video{max-width:100%;display:block}
+.wrap{padding-inline:var(--gutter)}
+h1,h2,h3{font-family:var(--display);font-stretch:62%;font-weight:600;text-transform:uppercase;line-height:.9;letter-spacing:-.01em;margin:0;text-wrap:balance}
+.kind,.meta,.credit,.facts dd,nav a,.hint,.ig a,.contact .label{font-size:10px;letter-spacing:.14em;text-transform:uppercase;font-weight:500}
+.kind{margin:0 0 14px;color:var(--fg)}
+.meta{margin:0;color:var(--fg)} .meta.roles{color:var(--muted);margin-top:6px}
+.meta i,.ig i,.roles i{display:inline-block;width:1px;height:.9em;background:currentColor;vertical-align:-.1em;margin:0 10px;opacity:.7}
+.roles i{width:3px;height:3px;border-radius:50%;vertical-align:.2em}
+.lead{font-weight:300;font-size:clamp(18px,2.2vw,24px);line-height:1.25;letter-spacing:-.02em;margin:28px 0 18px;max-width:28ch}
+.body{max-width:62ch;font-size:14px;line-height:1.6;letter-spacing:-.012em}
+.body p{margin:0 0 1em}
+.body.cols{max-width:none;column-count:2;column-gap:32px}
+@media (max-width:760px){.body.cols{column-count:1}}
+
+/* nav */
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:rgba(10,10,10,.86);backdrop-filter:blur(10px);border-bottom:1px solid var(--rule)}
+nav .in{display:flex;gap:22px;align-items:center;padding:14px var(--gutter);overflow-x:auto;scrollbar-width:none}
+nav .in::-webkit-scrollbar{display:none}
+nav a{text-decoration:none;white-space:nowrap;color:var(--muted)} nav a:hover,nav a:focus-visible{color:var(--fg);outline:none}
+nav .navlabel{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--fg);white-space:nowrap;padding-left:18px;border-left:1px solid var(--rule)}
+.band{padding:clamp(40px,7vw,96px) var(--gutter) 0;display:flex;align-items:baseline;gap:24px}
+.band h2{font-size:clamp(40px,6vw,88px)} .band .kind{margin:0;color:var(--muted)}
+nav .cur{margin-right:auto;font-family:var(--display);font-stretch:62%;font-weight:600;font-size:14px;text-transform:uppercase;color:var(--muted);white-space:nowrap;opacity:0;transition:opacity .25s}
+nav .cur.on{opacity:1}
+nav .cur::before{content:"/";margin:0 10px 0 2px;color:var(--rule)}
+nav a.brand{font-family:var(--display);font-stretch:62%;font-weight:600;font-size:14px;letter-spacing:0;color:var(--fg);}
+
+/* cover */
+.cover{display:grid;grid-template-columns:1fr 1fr;min-height:min(86vh,900px);border-bottom:1px solid var(--rule)}
+.cover .ph{aspect-ratio:auto;height:100%;min-height:60vh}
+.cover .panel{padding:clamp(28px,5vw,64px) var(--gutter);display:flex;flex-direction:column}
+.cover h1{font-size:clamp(64px,11vw,160px)}
+.cover .meta{margin-top:22px}
+.cover .foot{margin-top:auto;padding-top:40px;display:flex;flex-wrap:wrap;gap:12px 28px;align-items:center}
+@media (max-width:760px){.cover{grid-template-columns:1fr}.cover .ph{min-height:70vh}}
+
+/* photos */
+.ph{position:relative;margin:0;background:var(--photo);overflow:hidden;aspect-ratio:3/4}
+.ph img{width:100%;height:100%;object-fit:cover}
+.credit{position:absolute;left:12px;bottom:10px;font-size:8px;letter-spacing:.14em;color:rgba(244,242,238,.85);text-shadow:0 0 6px rgba(0,0,0,.7)}
+.credit i{display:inline-block;width:3px;height:3px;border-radius:50%;background:currentColor;vertical-align:.25em;margin:0 6px}
+.grid{display:grid;grid-template-columns:repeat(6,1fr);gap:8px;padding:8px var(--gutter) 0}
+.grid .ph{grid-column:span 3;cursor:zoom-in}
+.grid .ph:nth-child(5n+3){grid-column:span 6;aspect-ratio:16/9}
+.grid .ph:nth-child(5n+4),.grid .ph:nth-child(5n+5){grid-column:span 3}
+.grid .ph:nth-child(10n+6),.grid .ph:nth-child(10n+7),.grid .ph:nth-child(10n+8){grid-column:span 2;aspect-ratio:4/5}
+.grid .ph:nth-child(10n+9),.grid .ph:nth-child(10n+10){grid-column:span 3;aspect-ratio:4/5}
+.ph:focus-visible{outline:2px solid var(--fg);outline-offset:2px}
+@media (max-width:760px){.grid .ph,.grid .ph:nth-child(n){grid-column:span 6;aspect-ratio:4/5}.grid .ph:nth-child(5n+3){aspect-ratio:3/2}}
+
+/* portrait */
+.portrait{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px solid var(--rule)}
+.portrait .text{padding:clamp(28px,5vw,64px) var(--gutter)}
+.portrait h2{font-size:clamp(48px,7vw,104px)}
+.portrait .ph{aspect-ratio:auto;min-height:70vh}
+.logos{display:flex;gap:28px;align-items:center;margin-top:40px} .logos img{height:26px;width:auto}
+@media (max-width:760px){.portrait{grid-template-columns:1fr}}
+
+/* shows */
+.show{padding-bottom:clamp(40px,6vw,96px);border-bottom:1px solid var(--rule)}
+.show-head{display:grid;grid-template-columns:1fr 1fr;align-items:stretch}
+.show-head .text{padding:clamp(28px,5vw,64px) var(--gutter);display:flex;flex-direction:column}
+.show-head .body{margin-top:28px}
+.show-head h2{font-size:clamp(48px,7vw,104px);margin-bottom:22px}
+.show-head .ph.hero{aspect-ratio:auto;min-height:70vh}
+@media (max-width:760px){.show-head{grid-template-columns:1fr}.show-head .ph.hero{min-height:60vh}}
+.facts{display:grid;grid-template-columns:repeat(3,auto);gap:16px 40px;margin:36px 0 0;padding-top:20px;justify-content:start}
+.facts dt{font-family:var(--display);font-stretch:62%;font-weight:600;font-size:28px;line-height:1}
+.facts dd{margin:6px 0 0;color:var(--muted)}
+
+/* videos */
+.videos{padding:clamp(28px,5vw,64px) var(--gutter) 0}
+.videos-head{display:flex;flex-wrap:wrap;gap:8px 32px;align-items:baseline;margin-bottom:18px}
+.hint{margin:0;color:var(--muted);text-transform:none;letter-spacing:0;font-size:13px}
+.vwrap{position:relative;margin-inline:calc(-1 * var(--gutter))}
+.vrow{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;padding:0 var(--gutter);scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.vrow::-webkit-scrollbar{display:none}
+.vid{position:relative;margin:0;flex:0 0 auto;height:min(78vh,760px);aspect-ratio:9/16;background:var(--photo);overflow:hidden;cursor:pointer;scroll-snap-align:center}
+.vid video{width:100%;height:100%;object-fit:cover}
+.vid .play{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:64px;height:64px;border-radius:50%;border:1px solid rgba(244,242,238,.55);background:rgba(10,10,10,.45);color:var(--fg);display:grid;place-items:center;padding-left:4px;transition:opacity .25s;opacity:.9}
+.vid.playing .play{opacity:0} .vid:hover .play,.vid:focus-visible .play{opacity:1}
+.vid .num{position:absolute;left:14px;bottom:12px;font-size:10px;letter-spacing:.14em;color:rgba(244,242,238,.85);font-weight:500}
+.vid:focus-visible{outline:2px solid var(--fg);outline-offset:-2px}
+.arr{position:absolute;top:50%;transform:translateY(-50%);width:48px;height:48px;border-radius:50%;border:1px solid var(--rule);background:rgba(10,10,10,.7);color:var(--fg);font:inherit;font-size:18px;cursor:pointer;backdrop-filter:blur(6px)}
+.arr.prev{left:calc(var(--gutter) - 12px)} .arr.next{right:calc(var(--gutter) - 12px)}
+@media (max-width:760px){.vid{height:70vh}.arr{display:none}}
+.ig{margin:22px 0 0} .ig a{text-decoration:underline;text-underline-offset:4px}
+
+/* lightbox */
+.lb{position:fixed;inset:0;background:rgba(0,0,0,.95);z-index:50;display:none;place-items:center;padding:24px}
+.lb.open{display:grid}
+.lb video,.lb img{max-height:calc(100vh - 48px);max-width:calc(100vw - 48px);width:auto;height:auto;background:#000}
+.lb video{aspect-ratio:9/16} .lb img[hidden],.lb video[hidden]{display:none}
+.lb .nav{position:absolute;top:50%;transform:translateY(-50%);width:48px;height:48px;border-radius:50%;border:1px solid var(--rule);background:rgba(10,10,10,.6);color:var(--fg);font:inherit;font-size:18px;cursor:pointer}
+.lb .nav.l{left:16px} .lb .nav.r{right:16px}
+.lb .cap{position:absolute;left:24px;bottom:calc(16px + env(safe-area-inset-bottom,0px));font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.lb .close{position:absolute;top:calc(16px + env(safe-area-inset-top,0px));right:16px;background:none;border:1px solid var(--rule);color:var(--fg);font:inherit;font-size:11px;letter-spacing:.14em;text-transform:uppercase;padding:10px 14px;cursor:pointer}
+
+/* contact */
+.contact{position:relative;min-height:70vh;display:grid;grid-template-columns:1fr 1fr}
+.contact .ph{aspect-ratio:auto;min-height:60vh}
+.contact .block{padding:clamp(28px,5vw,64px) var(--gutter)}
+.contact h2{font-size:clamp(48px,7vw,104px);margin-bottom:28px}
+.contact .line{font-size:16px;margin:0 0 6px} .contact .line a{text-decoration:none;border-bottom:1px solid var(--rule)}
+.contact .label{color:var(--muted);margin:26px 0 8px}
+.contact .name{font-family:var(--display);font-stretch:62%;font-weight:600;font-size:22px;text-transform:uppercase;margin:0 0 14px}
+@media (max-width:760px){.contact{grid-template-columns:1fr}}
+footer{padding:32px var(--gutter) 48px;color:var(--muted);font-size:11px;letter-spacing:.08em;text-transform:uppercase;border-top:1px solid var(--rule)}
+/* ===== native ratios, no cropping ===== */
+.ph{aspect-ratio:auto} .ph img{height:auto;object-fit:contain}
+.grid{display:flex !important;flex-wrap:wrap;gap:8px;padding:8px var(--gutter) 0}
+.grid .ph,.grid .ph:nth-child(n){grid-column:auto;flex:calc(var(--r) * 100) 1 calc(var(--r) * 260px);min-width:0}
+.grid::after{content:"";flex:9999 1 0}
+.cover .ph,.portrait .ph,.show-head .ph.hero,.contact .ph{min-height:0 !important;height:auto !important;align-self:start}
+.cover,.portrait,.show-head,.contact{align-items:start}
+@media (max-width:760px){.grid .ph,.grid .ph:nth-child(n){flex:1 1 100%}}
+/* video grid (no horizontal scroll) */
+.vgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.vgrid .vid{height:auto;width:100%;aspect-ratio:9/16}
+@media (max-width:1000px){.vgrid{grid-template-columns:repeat(3,1fr)}}
+@media (max-width:760px){.vgrid{grid-template-columns:repeat(2,1fr)}}
+/* separators inside small-caps labels */
+.kind i{display:inline-block;width:1px;height:.9em;background:currentColor;vertical-align:-.1em;margin:0 10px;opacity:.7}
+/* ===== desktop galleries v2: masonry, same width, native ratios ===== */
+.grid{display:block !important;column-count:3;column-gap:10px;padding:10px var(--gutter) 0}
+.grid::after{display:none}
+.grid .ph,.grid .ph:nth-child(n){display:block;width:100%;margin:0 0 10px;break-inside:avoid;flex:none}
+@media (max-width:1000px){.grid{column-count:2}}
+@media (max-width:600px){.grid{column-count:1}}
+.vgrid{display:flex !important;flex-wrap:wrap;justify-content:center;gap:10px}
+.vgrid .vid{width:calc((100% - 30px) / 4)}
+@media (max-width:1000px){.vgrid .vid{width:calc((100% - 20px) / 3)}}
+@media (max-width:760px){.vgrid .vid{width:calc((100% - 10px) / 2)}}
+.stage{display:none !important}
+/* ===== video strip: horizontal scroll ===== */
+.vwrap2{position:relative}
+.vtrack{display:grid;grid-auto-flow:column;grid-auto-columns:calc((100% - 30px) / 3.4);gap:10px;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;overscroll-behavior-x:contain;cursor:grab;scrollbar-width:thin;scrollbar-color:var(--rule) transparent;padding-bottom:10px}
+.vtrack.drag{cursor:grabbing;scroll-snap-type:none}
+.vtrack .vid{width:auto;height:auto;aspect-ratio:9/16;scroll-snap-align:start}
+.varr{position:absolute;top:calc(50% - 5px);transform:translateY(-50%);width:48px;height:48px;border-radius:50%;border:1px solid var(--rule);background:rgba(10,10,10,.7);color:var(--fg);font:inherit;font-size:18px;cursor:pointer;z-index:2}
+.varr.l{left:12px} .varr.r{right:12px} .varr[disabled]{opacity:0;pointer-events:none}
+@media (max-width:1000px){.vtrack{grid-auto-columns:calc((100% - 20px) / 2.4)}}
+@media (max-width:760px){.vtrack{grid-auto-columns:72%}.varr{display:none}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+
+<nav><div class="in">
+  <a class="brand" href="#top">Oriane Azam</a><span class="cur" id="cur" aria-live="polite"></span>
+  <a href="#portrait">Portrait</a><a href="#nuits-d-orion">Mes créations</a><a href="#videos">Vidéos</a><a href="#contact">Contact</a>
+</div></nav>
+
+<header class="cover" id="top">
+  <figure class="ph " style="aspect-ratio:1017/1498;--r:0.6789;" data-full="img/old-couverture.jpg" tabindex="0"><img src="img/old-couverture.jpg" alt="" loading="lazy"><span class="credit">Photographie<i></i>Xavier Murillon</span></figure>
+  <div class="panel">
+    <p class="kind">Dossier de presse</p>
+    <h1>Oriane<br>Azam</h1>
+    <p class="meta">Chorégraphe<i></i>Directrice artistique</p>
+  </div>
+</header>
+
+<section class="portrait" id="portrait">
+  <div class="text">
+    <p class="kind">Portrait</p>
+    <h2>Oriane<br>Azam</h2>
+    <p class="meta" style="margin-top:22px">Chorégraphe<i></i>Directrice artistique</p>
+    <div class="body" style="margin-top:28px"><p>Après avoir étudié au Conservatoire de Toulouse (option danse classique) de ses 12 à 15 ans, Oriane a poursuivi ses études au Conservatoire National Supérieur de Paris où elle est sortie diplômée à ses 18 ans.</p><p>En parallèle de sa passion pour la danse classique, elle a très vite été attirée par le milieu du Cabaret parisien. En 2011, elle intègre le Paradis Latin où elle reste 3 ans, avant d’intégrer le Crazy Horse. Elle y dansera en tant que soliste et capitaine jusqu’en 2019.</p><p>L’obtention de son Diplôme d’État de Professeur de danse classique en 2017 lui a ouvert les portes d’une nouvelle passion : la transmission. Depuis 6 ans maintenant, elle enseigne la discipline du Heels Cabaret.</p><p>Entourée par plus de 80 élèves, elle a déjà monté et chorégraphié 2 spectacles : le Supernova Show en 2024 au Théâtre de la Plaine et le Love Rhapsodie Show en 2025 au Théâtre du Gymnase. En avril 2025, Oriane a créé son propre cabaret « Les Nuits d’Orion » qui se produit au Studio Hébertot.</p></div>
+    <div class="logos"><img src="img/logo-paradis-latin.png" alt="Paradis Latin"><img src="img/logo-crazy-horse.png" alt="Crazy Horse Paris"></div>
+  </div>
+  <figure class="ph " style="aspect-ratio:1333/2000;--r:0.6665;" data-full="img/appartement-portrait.jpg" tabindex="0"><img src="img/appartement-portrait.jpg" alt="" loading="lazy"><span class="credit">Photographie<i></i>Yên Losset</span></figure>
+</section>
+
+
+<section class="show" id="nuits-d-orion">
+  <header class="show-head">
+    <div class="text">
+      <p class="kind">Cabaret<i></i>Troupe</p>
+      <h2>Les Nuits<br>d’Orion</h2>
+      <p class="meta">Depuis avril 2025<i></i>Studio Hébertot<i></i><a href="https://lesnuitsdorion.com" target="_blank" rel="noopener">lesnuitsdorion.com</a></p>
+      <p class="meta roles">Chorégraphie<i></i>Direction artistique<i></i>Régie lumière</p>
+      <p class="lead">Le néo-cabaret qui traverse la nuit.</p>
+      <div class="body"><p>« Les Nuits d’Orion, c’est un rêve que j’ai porté en moi pendant des années. Un rêve qui, à chaque étape de ma vie, a pris de nouvelles formes, mais qui n’a jamais cessé d’être là, présent dans ma tête.</p><p>Ce projet, je l’ai imaginé, espéré, façonné à travers des moments de doute, d’espoir et de beaucoup de travail. J’ai longtemps hésité à me lancer, à croire pleinement en cette vision onirique, à croire en moi, mais aujourd’hui je suis prête à franchir ce pas. Si tu ne crois pas en tes propres rêves, personne ne le fera pour toi.</p><p>Plongez dans un univers envoûtant et laissez-vous guider à travers les mystères de la nuit. Le temps d’une soirée, abandonnez-vous aux souvenirs, aux songes et aux cauchemars. Ce néo-cabaret fusionne sensualité et modernité pour troubler le spectateur venu dévoiler les secrets de la nuit.</p><p>Sous ma direction chorégraphique et artistique, ce spectacle réunit des femmes aux horizons multiples, issues de sphères professionnelles et créatives variées. Elles partagent toutes une profonde passion pour l’art de la danse. Si ce projet existe aujourd’hui c’est en partie grâce à elles.</p><p>La nuit est porteuse d’espoir, de conseils et de rêves mais aussi d’obscurité, de regrets, de dangers. Les Nuits d’Orion sont une invitation à traverser ensemble ces expériences habituellement solitaires et dissimulées. Chaque tableau y incarne un voyage entre le visible et l’invisible, dévoilant les secrets qui nous animent. »</p></div>
+      <dl class="facts"><div><dt>15 à 20</dt><dd>danseuses</dd></div><div><dt>100</dt><dd>spectateurs par soir</dd></div><div><dt>Sold out</dt><dd>avril 2025 à avril 2026</dd></div></dl>
+    </div>
+    <figure class="ph hero" style="aspect-ratio:1601/2400;--r:0.6671;" data-full="img/shoot-manteau.jpg" tabindex="0"><img src="img/shoot-manteau.jpg" alt="" loading="lazy"><span class="credit">Photographie<i></i>Xavier Murillon</span></figure>
+  </header>
+  <div class="gal">
+    <div class="stage"><img alt="" src="img/lno-chaise-rouge.jpg"><span class="credit"></span>
+      <button type="button" class="sarr l" aria-label="Photo précédente">←</button><button type="button" class="sarr r" aria-label="Photo suivante">→</button><span class="count"></span></div>
+    <div class="grid"><figure class="ph " style="aspect-ratio:1717/2576;--r:0.6665;" data-full="img/lno-chaise-rouge.jpg" tabindex="0"><img src="img/lno-chaise-rouge.jpg" alt="" loading="lazy"><span class="credit">Photographie<i></i>Yên Losset</span></figure><figure class="ph " style="aspect-ratio:1920/2400;--r:0.8000;" data-full="img/lno-grand-ecart.jpg" tabindex="0"><img src="img/lno-grand-ecart.jpg" alt="" loading="lazy"><span class="credit">Photographie<i></i>Marie</span></figure><figure class="ph " style="aspect-ratio:1066/1578;--r:0.6755;" data-full="img/ndo-spot.jpg" tabindex="0"><img src="img/ndo-spot.jpg" alt="" loading="lazy"><span class="credit">Photographie<i></i>Yên Losset</span></figure><figure class="ph " style="aspect-ratio:1057/1555;--r:0.6797;" data-full="img/ndo-grand-ecart-violet.jpg" tabindex="0"><img src="img/ndo-grand-ecart-violet.jpg" alt="" loading="lazy"><span class="credit">Photographie<i></i>Yên Losset</span></figure><figure class="ph " style="aspect-ratio:1600/1066;--r:1.5009;" data-full="img/ndo-trio-dentelle.jpg" tabindex="0"><img src="img/ndo-trio-dentelle.jpg" alt="" loading="lazy"><span class="credit">Photographie<i></i>Yên Losset</span></figure><figure class="ph " style="aspect-ratio:1066/1573;--r:0.6777;" data-full="img/ndo-resille-talon.jpg" tabindex="0"><img src="img/ndo-resille-talon.jpg" alt="" loading="lazy"><span class="credit">Photographie<i></i>Yên Losset</span></figure><figure class="ph " style="aspect-ratio:2400/1600;--r:1.5000;" data-full="img/lno-ligne-rouge.jpg" tabindex="0"><img src="img/lno-ligne-rouge.jpg" alt="" loading="lazy"><span class="credit">Photographie<i></i>Marie</span></figure><figure class="ph " style="aspect-ratio:1920/2400;--r:0.8000;" data-full="img/lno-spot-solo.jpg" tabindex="0"><img src="img/lno-spot-solo.jpg" alt="" loading="lazy"><span class="credit">Photographie<i></i>Marie</span></figure><figure class="ph " style="aspect-ratio:2576/1717;--r:1.5003;" data-full="img/lno-ecart-roux.jpg" tabindex="0"><img src="img/lno-ecart-roux.jpg" alt="" loading="lazy"><span class="credit">Photographie<i></i>Marie</span></figure><figure class="ph " style="aspect-ratio:2061/2576;--r:0.8001;" data-full="img/lno-groupe-resille.jpg" tabindex="0"><img src="img/lno-groupe-resille.jpg" alt="" loading="lazy"></figure></div>
+  </div>
+  
+  <div class="videos" id="videos">
+    <div class="videos-head"><p class="kind">Extraits vidéo</p><p class="hint">Les extraits défilent en silence. Touchez-en un pour le voir en grand, avec le son.</p></div>
+    <div class="vwrap2"><div class="vtrack" id="vtrack"><figure class="vid" data-i="1" tabindex="0"><video muted playsinline loop preload="none" poster="media/v1.jpg" src="media/v1.mp4"></video><span class="play"><svg viewBox="0 0 24 24" width="26" height="26"><path d="M8 5v14l11-7z" fill="currentColor"/></svg></span><span class="num">01</span></figure><figure class="vid" data-i="2" tabindex="0"><video muted playsinline loop preload="none" poster="media/v2.jpg" src="media/v2.mp4"></video><span class="play"><svg viewBox="0 0 24 24" width="26" height="26"><path d="M8 5v14l11-7z" fill="currentColor"/></svg></span><span class="num">02</span></figure><figure class="vid" data-i="3" tabindex="0"><video muted playsinline loop preload="none" poster="media/v3.jpg" src="media/v3.mp4"></video><span class="play"><svg viewBox="0 0 24 24" width="26" height="26"><path d="M8 5v14l11-7z" fill="currentColor"/></svg></span><span class="num">03</span></figure><figure class="vid" data-i="4" tabindex="0"><video muted playsinline loop preload="none" poster="media/v4.jpg" src="media/v4.mp4"></video><span class="play"><svg viewBox="0 0 24 24" width="26" height="26"><path d="M8 5v14l11-7z" fill="currentColor"/></svg></span><span class="num">04</span></figure><figure class="vid" data-i="5" tabindex="0"><video muted playsinline loop preload="none" poster="media/v5.jpg" src="media/v5.mp4"></video><span class="play"><svg viewBox="0 0 24 24" width="26" height="26"><path d="M8 5v14l11-7z" fill="currentColor"/></svg></span><span class="num">05</span></figure><figure class="vid" data-i="6" tabindex="0"><video muted playsinline loop preload="none" poster="media/v6.jpg" src="media/v6.mp4"></video><span class="play"><svg viewBox="0 0 24 24" width="26" height="26"><path d="M8 5v14l11-7z" fill="currentColor"/></svg></span><span class="num">06</span></figure><figure class="vid" data-i="7" tabindex="0"><video muted playsinline loop preload="none" poster="media/v7.jpg" src="media/v7.mp4"></video><span class="play"><svg viewBox="0 0 24 24" width="26" height="26"><path d="M8 5v14l11-7z" fill="currentColor"/></svg></span><span class="num">07</span></figure></div>
+      <button type="button" class="varr l" id="vl" aria-label="Extraits précédents">←</button><button type="button" class="varr r" id="vr" aria-label="Extraits suivants">→</button></div>
+    <p class="ig"><a href="https://www.instagram.com/reel/DXL9aLxArCs/" target="_blank" rel="noopener">Voir le reel sur Instagram</a><i></i><a href="https://www.instagram.com/p/DW8dYl4AsVD/" target="_blank" rel="noopener">Voir la publication</a></p>
+  </div>
+</section>
+
+
+<section class="show" id="supernova">
+  <header class="show-head">
+    <div class="text">
+      <p class="kind">Show</p>
+      <h2>Supernova<br>Show</h2>
+      <p class="meta">25 &amp; 31 mai 2024<i></i>Théâtre de la Plaine</p>
+      <p class="meta roles">Chorégraphie<i></i>Direction artistique<i></i>Régie lumière</p>
+      
+      <div class="body"><p>« Bienvenue à bord du Supernova Show. Le titre de ce spectacle est le fruit d’une réflexion collective.</p><p>Inspirées par l’énergie ardente des étoiles de type O, nous avons voulu refléter l’intensité et le caractère si unique de chacune. Une véritable constellation d’Orion est née, de la réunion de toutes ces femmes aussi brillantes que reconnaissables.</p><p>À travers Supernova, nous vous invitons à un voyage au-delà des étoiles, dans ces univers chorégraphiques et musicaux multiples. Comme une supernova en pleine puissance, toute la troupe est prête à illuminer la scène.</p><p>Asseyez-vous et laissez-vous embarquer dans notre galaxie. Que le spectacle commence… »</p></div>
+      <dl class="facts"><div><dt>30</dt><dd>danseuses</dd></div><div><dt>300</dt><dd>spectateurs</dd></div></dl>
+    </div>
+    <figure class="ph hero" style="aspect-ratio:738/1091;--r:0.6764;" data-full="img/sn-nb-groupe.jpg" tabindex="0"><img src="img/sn-nb-groupe.jpg" alt="" loading="lazy"></figure>
+  </header>
+  <div class="gal">
+    <div class="stage"><img alt="" src="img/sequins-rouges.jpg"><span class="credit"></span>
+      <button type="button" class="sarr l" aria-label="Photo précédente">←</button><button type="button" class="sarr r" aria-label="Photo suivante">→</button><span class="count"></span></div>
+    <div class="grid"><figure class="ph " style="aspect-ratio:1152/1440;--r:0.8000;" data-full="img/sequins-rouges.jpg" tabindex="0"><img src="img/sequins-rouges.jpg" alt="" loading="lazy"></figure><figure class="ph " style="aspect-ratio:1152/1440;--r:0.8000;" data-full="img/oriane-solo-noir.jpg" tabindex="0"><img src="img/oriane-solo-noir.jpg" alt="" loading="lazy"></figure><figure class="ph " style="aspect-ratio:1145/839;--r:1.3647;" data-full="img/sn-bottes-duo.jpg" tabindex="0"><img src="img/sn-bottes-duo.jpg" alt="" loading="lazy"><span class="credit">Photographie<i></i>Didier Bonin</span></figure><figure class="ph " style="aspect-ratio:1717/2576;--r:0.6665;" data-full="img/sn-duo-sol.jpg" tabindex="0"><img src="img/sn-duo-sol.jpg" alt="" loading="lazy"><span class="credit">Photographie<i></i>Yên Losset</span></figure><figure class="ph " style="aspect-ratio:928/1362;--r:0.6814;" data-full="img/sn-metal-groupe.jpg" tabindex="0"><img src="img/sn-metal-groupe.jpg" alt="" loading="lazy"><span class="credit">Photographie<i></i>Didier Bonin</span></figure><figure class="ph " style="aspect-ratio:923/1353;--r:0.6822;" data-full="img/sn-rouge-porte.jpg" tabindex="0"><img src="img/sn-rouge-porte.jpg" alt="" loading="lazy"><span class="credit">Photographie<i></i>Didier Bonin</span></figure><figure class="ph " style="aspect-ratio:926/1358;--r:0.6819;" data-full="img/sn-metal-solo.jpg" tabindex="0"><img src="img/sn-metal-solo.jpg" alt="" loading="lazy"><span class="credit">Photographie<i></i>Didier Bonin</span></figure><figure class="ph " style="aspect-ratio:942/1379;--r:0.6831;" data-full="img/sn-tatouage.jpg" tabindex="0"><img src="img/sn-tatouage.jpg" alt="" loading="lazy"><span class="credit">Photographie<i></i>Didier Bonin</span></figure><figure class="ph " style="aspect-ratio:1333/2000;--r:0.6665;" data-full="img/bottes-sequins.jpg" tabindex="0"><img src="img/bottes-sequins.jpg" alt="" loading="lazy"></figure><figure class="ph " style="aspect-ratio:1067/1600;--r:0.6669;" data-full="img/robe-argent.jpg" tabindex="0"><img src="img/robe-argent.jpg" alt="" loading="lazy"></figure></div>
+  </div>
+  
+</section>
+
+
+<section class="show" id="love-rhapsodie">
+  <header class="show-head">
+    <div class="text">
+      <p class="kind">Show</p>
+      <h2>Love<br>Rhapsodie<br>Show</h2>
+      <p class="meta">12 &amp; 13 juin 2025<i></i>Théâtre du Gymnase</p>
+      <p class="meta roles">Chorégraphie<i></i>Direction artistique<i></i>Régie lumière</p>
+      
+      <div class="body"><p>« C’est avec une immense joie et une grande fierté que je vous invite à découvrir mon deuxième spectacle : « Love Rhapsodie », avec mes 60 danseuses, sur la scène du Théâtre du Gymnase.</p><p>Love Rhapsodie est un hommage à l’amour dans toute sa diversité, qu’il soit passionné, tendre, incandescent, transgressif ou sans limite, tourné vers l’autre ou vers soi. Comme un amour qui dépasse les normes, qui brise les frontières et qui célèbre toutes les nuances de nos désirs, de nos corps et de nos âmes.</p><p>À travers une composition musicale éclectique et libre, ma Rhapsodie devient une véritable exploration de nos émotions, de nos contrastes. Mes danseuses, par leur puissance, leur fragilité, leur audace et leur délicatesse, les reflèteront sur scène, face à vous. »</p></div>
+      <dl class="facts"><div><dt>60</dt><dd>danseuses</dd></div><div><dt>600</dt><dd>spectateurs</dd></div></dl>
+    </div>
+    <figure class="ph hero" style="aspect-ratio:1600/2000;--r:0.8000;" data-full="img/silhouettes-table.jpg" tabindex="0"><img src="img/silhouettes-table.jpg" alt="" loading="lazy"></figure>
+  </header>
+  <div class="gal">
+    <div class="stage"><img alt="" src="img/groupe-spot.jpg"><span class="credit"></span>
+      <button type="button" class="sarr l" aria-label="Photo précédente">←</button><button type="button" class="sarr r" aria-label="Photo suivante">→</button><span class="count"></span></div>
+    <div class="grid"><figure class="ph " style="aspect-ratio:1320/1644;--r:0.8029;" data-full="img/groupe-spot.jpg" tabindex="0"><img src="img/groupe-spot.jpg" alt="" loading="lazy"></figure><figure class="ph " style="aspect-ratio:1320/1635;--r:0.8073;" data-full="img/miroirs.jpg" tabindex="0"><img src="img/miroirs.jpg" alt="" loading="lazy"></figure><figure class="ph " style="aspect-ratio:2000/1334;--r:1.4993;" data-full="img/tulle-rouge-paysage.jpg" tabindex="0"><img src="img/tulle-rouge-paysage.jpg" alt="" loading="lazy"><span class="credit">Photographie<i></i>Xavier Murillon</span></figure><figure class="ph " style="aspect-ratio:1320/1946;--r:0.6783;" data-full="img/ligne-voile.jpg" tabindex="0"><img src="img/ligne-voile.jpg" alt="" loading="lazy"></figure><figure class="ph " style="aspect-ratio:1285/1935;--r:0.6641;" data-full="img/coulisses-bleu.jpg" tabindex="0"><img src="img/coulisses-bleu.jpg" alt="" loading="lazy"></figure><figure class="ph " style="aspect-ratio:1320/1971;--r:0.6697;" data-full="img/coulisses-rose.jpg" tabindex="0"><img src="img/coulisses-rose.jpg" alt="" loading="lazy"></figure></div>
+  </div>
+  
+</section>
+
+<section class="contact" id="contact">
+  <figure class="ph " style="aspect-ratio:2400/1601;--r:1.4991;" data-full="img/shoot-fauteuils.jpg" tabindex="0"><img src="img/shoot-fauteuils.jpg" alt="" loading="lazy"><span class="credit">Photographie<i></i>Xavier Murillon</span></figure>
+  <div class="block">
+    <p class="kind">Booking et presse</p>
+    <h2>Contact</h2>
+    <p class="name">Oriane Azam</p>
+    <p class="line"><a href="tel:+33663529211">06 63 52 92 11</a></p>
+    <p class="line"><a href="mailto:oriane.heels@gmail.com">oriane.heels@gmail.com</a></p>
+    <p class="label">Site</p>
+    <p class="line"><a href="https://lesnuitsdorion.com" target="_blank" rel="noopener">lesnuitsdorion.com</a></p>
+    <p class="label">Vidéos et actualités sur Instagram</p>
+    <p class="line"><a href="https://www.instagram.com/oriane_heels/" target="_blank" rel="noopener">@oriane_heels</a></p>
+    <p class="line"><a href="https://www.instagram.com/lesnuitsdorion_/" target="_blank" rel="noopener">@lesnuitsdorion_</a></p>
+    <p class="label">Dossier de presse</p>
+    <p class="line"><a href="Dossier-de-presse-Oriane-Azam.pdf" target="_blank" rel="noopener">Télécharger le PDF</a></p>
+  </div>
+</section>
+<footer>Oriane Azam · Dossier de presse · Photographies Xavier Murillon, Yên Losset, Marie, Théo, Didier Bonin, Agathe V.</footer>
+
+<div class="lb" id="lb" aria-hidden="true"><button type="button" class="close" id="lbclose">Fermer</button><button type="button" class="nav l" id="lbprev" aria-label="Précédent">←</button><button type="button" class="nav r" id="lbnext" aria-label="Suivant">→</button><img id="lbi" alt="" hidden><video id="lbv" controls playsinline hidden></video><p class="cap" id="lbcap"></p></div>
+
+<script>
+(function(){
+  var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var tiles=[].slice.call(document.querySelectorAll('.vid'));
+  if(!reduce && 'IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){var v=e.target.querySelector('video');
+      if(e.isIntersecting){v.preload='auto';v.play().then(function(){e.target.classList.add('playing');}).catch(function(){});}else{v.pause();e.target.classList.remove('playing');}});},{rootMargin:'80px',threshold:.5});
+    tiles.forEach(function(t){io.observe(t);});
+  }
+
+  var tr=document.getElementById('vtrack'),vl=document.getElementById('vl'),vr=document.getElementById('vr'),dragged=false;
+  function upd(){vl.disabled=tr.scrollLeft<4;vr.disabled=tr.scrollLeft+tr.clientWidth>=tr.scrollWidth-4;}
+  function stepv(d){var w=tr.querySelector('.vid').getBoundingClientRect().width+10;tr.scrollTo({left:tr.scrollLeft+d*w*2,behavior:reduce?'auto':'smooth'});}
+  vl.addEventListener('click',function(){stepv(-1);}); vr.addEventListener('click',function(){stepv(1);});
+  tr.addEventListener('scroll',upd,{passive:true}); window.addEventListener('resize',upd); upd();
+  var sx=0,sl=0,down=false;
+  tr.addEventListener('pointerdown',function(e){if(e.pointerType!=='mouse')return;down=true;dragged=false;sx=e.clientX;sl=tr.scrollLeft;});
+  window.addEventListener('pointermove',function(e){if(!down)return;var dx=e.clientX-sx;if(Math.abs(dx)>5){dragged=true;tr.classList.add('drag');}if(dragged)tr.scrollLeft=sl-dx;});
+  window.addEventListener('pointerup',function(){if(!down)return;down=false;tr.classList.remove('drag');setTimeout(function(){dragged=false;},0);});
+  tr.addEventListener('click',function(e){if(dragged){e.stopPropagation();e.preventDefault();}},true);
+  var cur=document.getElementById('cur'),names={'nuits-d-orion':'Les Nuits d’Orion','supernova':'Supernova Show','love-rhapsodie':'Love Rhapsodie Show'};
+  var secs=['top','portrait','nuits-d-orion','supernova','love-rhapsodie','contact'].map(function(id){return document.getElementById(id);}).filter(Boolean),tick=false;
+  function upcur(){tick=false;var y=innerHeight*0.4,n='';secs.forEach(function(s){var r=s.getBoundingClientRect();if(r.top<=y&&r.bottom>y)n=names[s.id]||'';});if(cur.textContent!==n)cur.textContent=n;cur.classList.toggle('on',!!n);}
+  addEventListener('scroll',function(){if(!tick){tick=true;requestAnimationFrame(upcur);}},{passive:true}); addEventListener('resize',upcur); upcur();
+  var lb=document.getElementById('lb'),lbv=document.getElementById('lbv'),lbi=document.getElementById('lbi'),cap=document.getElementById('lbcap');
+  var set=[],idx=0;
+  function show(){var it=set[idx];
+    if(it.video){lbi.hidden=true;lbv.hidden=false;lbv.src=it.video;lbv.muted=false;lbv.play().catch(function(){});}
+    else{lbv.pause();lbv.removeAttribute('src');lbv.hidden=true;lbi.hidden=false;lbi.src=it.img;}
+    cap.textContent=(idx+1)+' / '+set.length+(it.cred?'   ·   '+it.cred:'');}
+  function open(items,i){set=items;idx=i;lb.classList.add('open');lb.setAttribute('aria-hidden','false');show();}
+  function close(){lbv.pause();lbv.removeAttribute('src');lbv.load();lb.classList.remove('open');lb.setAttribute('aria-hidden','true');}
+  function move(d){idx=(idx+d+set.length)%set.length;show();}
+  var desk={matches:false};
+  document.querySelectorAll('.gal').forEach(function(gal){
+    var grid=gal.querySelector('.grid'),stage=gal.querySelector('.stage'),simg=stage.querySelector('img'),scred=stage.querySelector('.credit'),scount=stage.querySelector('.count');
+    var figs=[].slice.call(grid.querySelectorAll('.ph')),cur=0;
+    var items=figs.map(function(f){var c=f.querySelector('.credit');return {img:f.getAttribute('data-full'),cred:c?c.textContent.replace('Photographie','Photographie ·'):'',raw:c?c.innerHTML:''};});
+    function set(i){cur=(i+figs.length)%figs.length;simg.src=items[cur].img;scred.innerHTML=items[cur].raw;scount.textContent=(cur+1)+' / '+figs.length;figs.forEach(function(f,k){f.classList.toggle('on',k===cur);});}
+    set(0);
+    figs.forEach(function(f,i){function go(){if(desk.matches)set(i);else open(items,i);} f.addEventListener('click',go);f.addEventListener('keydown',function(e){if(e.key==='Enter')go();});});
+    stage.querySelector('.sarr.l').addEventListener('click',function(e){e.stopPropagation();set(cur-1);});
+    stage.querySelector('.sarr.r').addEventListener('click',function(e){e.stopPropagation();set(cur+1);});
+    stage.addEventListener('click',function(){open(items,cur);});
+  });
+  var vitems=tiles.map(function(t){return {video:t.querySelector('video').getAttribute('src'),cred:'Extrait '+t.getAttribute('data-i')+' · Théo'};});
+  tiles.forEach(function(t,i){function go(){open(vitems,i);} t.addEventListener('click',go);t.addEventListener('keydown',function(e){if(e.key==='Enter')go();});});
+  document.getElementById('lbclose').addEventListener('click',close);
+  document.getElementById('lbprev').addEventListener('click',function(){move(-1);});
+  document.getElementById('lbnext').addEventListener('click',function(){move(1);});
+  lb.addEventListener('click',function(e){if(e.target===lb)close();});
+  document.addEventListener('keydown',function(e){if(!lb.classList.contains('open'))return;if(e.key==='Escape')close();if(e.key==='ArrowRight')move(1);if(e.key==='ArrowLeft')move(-1);});
+  var sx=0;lb.addEventListener('touchstart',function(e){sx=e.touches[0].clientX;},{passive:true});
+  lb.addEventListener('touchend',function(e){var dx=e.changedTouches[0].clientX-sx;if(Math.abs(dx)>60)move(dx<0?1:-1);});
+  document.querySelectorAll('.contact .line a[href^="mailto"],.contact .line a[href^="tel"]').forEach(function(a){a.addEventListener('click',function(){try{navigator.clipboard.writeText(a.textContent);}catch(e){}});});
+})();
+</script>
+
+</body>
+</html>
